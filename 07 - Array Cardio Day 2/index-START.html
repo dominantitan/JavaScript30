@@ -28,12 +28,23 @@
     // Some and Every Checks
     // Array.prototype.some() // is at least one person 19 or older?
     const someAreAdults = people.some((person) => {
-      return (2026 - person.year >= 20);
+      const currentYear = new Date().getFullYear();
+      return (currentYear - person.year >= 20);
     })
-
-    console.log(someAreAdults);
+    // if(someAreAdults){
+    // console.log("some of the people in array are adults");
+    // }
 
     // Array.prototype.every() // is everyone 19 or older?
+    const allAreAdults = people.every((person) => {
+      const currentYear = new Date().getFullYear();
+      return (currentYear - person.year >= 20);
+    })
+    // if(allAreAdults){
+    // console.log("All of the people in array are adults");
+    // }else {
+    //   console.log("Not All of the people in array are adults");
+    // }
 
     // Array.prototype.find()
     // Find is like filter, but instead returns just the one you are looking for
